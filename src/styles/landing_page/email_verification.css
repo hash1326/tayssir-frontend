@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+.verification-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9fafb;
+  font-family: 'Inter', sans-serif;
+  padding: 24px;
+}
+
+.verification-card {
+  background: #ffffff;
+  padding: 48px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  max-width: 440px;
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.verification-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  background-color: #eff6ff;
+  border-radius: 50%;
+  border: 4px solid #dbeafe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.mail-icon {
+  color: #3b82f6;
+}
+
+.verification-card h2 {
+  font-size: 1.875rem;
+  color: #111827;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.verification-card p {
+  color: #6b7280;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+.verification-card p strong {
+  color: #374151;
+}
+
+.code-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.code-input {
+  width: 48px;
+  height: 56px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  transition: all 0.2s;
+}
+
+.code-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.btn-verify-submit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111827;
+  color: #ffffff;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-bottom: 24px;
+}
+
+.btn-verify-submit:hover {
+  background-color: #374151;
+}
+
+.verification-footer {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.verification-footer .link {
+  color: #3b82f6;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.verification-footer .link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .code-input {
+    width: 40px;
+    height: 48px;
+    font-size: 1.25rem;
+    gap: 8px;
+  }
+}

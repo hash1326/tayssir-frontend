@@ -1,0 +1,139 @@
+.features-section {
+  padding: 100px 5%;
+  background: #f8fbff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.features-header h2 {
+  font-size: 2.5rem;
+  color: #1a3a5f;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.features-header p {
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+.feature-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.feature-card {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 380px;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.feature-content {
+  width: 50%;
+  padding: 40px 60px;
+}
+
+.feature-image-container {
+  width: 50%;
+  height: 380px;
+  background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feature-tag {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.feature-content h3 {
+  font-size: 2rem;
+  color: #1e293b;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.feature-content p {
+  color: #64748b;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.feature-icons-mini {
+  display: flex;
+  gap: 12px;
+}
+
+.mini-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.icon-blue { background: #eff6ff; color: #3b82f6; }
+.icon-purple { background: #f5f3ff; color: #8b5cf6; }
+.icon-orange { background: #fff7ed; color: #f97316; }
+
+@media (max-width: 1024px) {
+  .feature-content {
+    padding: 30px 40px;
+  }
+}
+
+@media (max-width: 968px) {
+  .feature-card, .feature-card.reverse {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .feature-image-container {
+    height: 300px;
+    width: 100%;
+  }
+}

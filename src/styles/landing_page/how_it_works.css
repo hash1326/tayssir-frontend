@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* ══════════════════════════════════════════════
+   How It Works — Dark Premium Timeline Design
+══════════════════════════════════════════════ */
+
+.hiw-section {
+  background: #ffffff;
+  padding: 120px 40px;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle top gradient accent */
+.hiw-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% -10%, rgba(79, 70, 229, 0.06) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hiw-section::after {
+  display: none;
+}
+
+/* ── Header ── */
+.hiw-header {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto 80px;
+}
+
+.hiw-eyebrow {
+  display: inline-block;
+  background: rgba(79, 70, 229, 0.08);
+  color: #4f46e5;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  padding: 5px 18px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.hiw-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin: 0 0 16px;
+}
+
+.hiw-subtitle {
+  font-size: 1.05rem;
+  color: #64748b;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ══════════════════════════
+   Timeline (Steps 01 & 02)
+══════════════════════════ */
+.hiw-timeline {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+  margin: 0 auto 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.hiw-timeline-step {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+/* Left column: step number + line */
+.hiw-step-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+.hiw-step-num {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #4f46e5;
+  letter-spacing: 0.05em;
+  background: #ede9fe;
+  border: 1px solid #c7d2fe;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hiw-step-line {
+  width: 1px;
+  flex: 1;
+  min-height: 40px;
+  background: linear-gradient(180deg, rgba(99, 102, 241, 0.4), rgba(99, 102, 241, 0.05));
+  margin: 8px 0;
+}
+
+.hiw-step-line--split {
+  background: linear-gradient(180deg, rgba(99, 102, 241, 0.3), transparent);
+  min-height: 24px;
+}
+
+/* Right: icon + text */
+.hiw-step-body {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 0 0 40px;
+  flex: 1;
+}
+
+.hiw-step-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.common-icon {
+  background: linear-gradient(135deg, #4f46e5, #2563eb);
+  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.3);
+}
+
+.hiw-step-text h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 6px;
+  line-height: 1.3;
+  padding-top: 10px;
+}
+
+.hiw-step-text p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ══════════════════════════
+   Fork Divider
+══════════════════════════ */
+.hiw-fork {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto 64px;
+  position: relative;
+  z-index: 2;
+}
+
+.hiw-fork-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.3), transparent);
+}
+
+.hiw-fork-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #4f46e5;
+  background: rgba(79, 70, 229, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  padding: 6px 18px;
+  border-radius: 30px;
+  white-space: nowrap;
+}
+
+/* ══════════════════════════
+   Dual Paths
+══════════════════════════ */
+.hiw-paths {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.hiw-path {
+  border-radius: 24px;
+  padding: 40px 36px;
+  border: 1px solid #e8edf5;
+  background: #f8f9ff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle top accent bar */
+.teacher-path::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #2563eb, #4f46e5);
+  border-radius: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.student-path::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #7c3aed, #a855f7);
+  border-radius: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Path Header */
+.hiw-path-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 36px;
+  position: relative;
+  z-index: 1;
+}
+
+.hiw-path-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.teacher-dot { background: #3b82f6; box-shadow: 0 0 10px rgba(59, 130, 246, 0.6); }
+.student-dot { background: #a855f7; box-shadow: 0 0 10px rgba(168, 85, 247, 0.6); }
+
+.hiw-path-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+/* Path Steps */
+.hiw-path-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.hiw-path-step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.hiw-path-step-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.hiw-path-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.teacher-icon {
+  background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
+}
+
+.student-icon {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  box-shadow: 0 4px 14px rgba(168, 85, 247, 0.3);
+}
+
+.hiw-path-connector {
+  width: 1px;
+  min-height: 28px;
+  margin: 6px 0;
+}
+
+.teacher-connector { background: linear-gradient(180deg, rgba(59,130,246,0.35), rgba(59,130,246,0.05)); }
+.student-connector  { background: linear-gradient(180deg, rgba(168,85,247,0.35), rgba(168,85,247,0.05)); }
+
+.hiw-path-step-content {
+  padding-bottom: 28px;
+  flex: 1;
+}
+
+.hiw-path-num {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #475569;
+  margin-bottom: 4px;
+}
+
+.hiw-path-step-content h5 {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 6px;
+  line-height: 1.3;
+}
+
+.hiw-path-step-content p {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ══════════════════════════
+   Responsive
+══════════════════════════ */
+@media (max-width: 900px) {
+  .hiw-paths {
+    grid-template-columns: 1fr;
+  }
+  .hiw-section {
+    padding: 80px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hiw-title {
+    font-size: 2rem;
+  }
+  .hiw-path {
+    padding: 28px 24px;
+  }
+}

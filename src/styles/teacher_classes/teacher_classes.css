@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* teacher_classes.css */
+.classes-container {
+  padding: 0 40px 40px;
+}
+
+/* Toolbar */
+.classes-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  background: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  border: 1px solid #e2e8f0;
+}
+
+.classes-search {
+  width: 400px;
+  background-color: #f1f5f9;
+}
+
+.toolbar-actions {
+  display: flex;
+  gap: 16px;
+}
+
+.filter-select {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background-color: #f8fafc;
+  font-weight: 500;
+  color: #475569;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-create-class {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+}
+
+.btn-create-class:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(29, 78, 216, 0.3);
+}
+
+/* Grid */
+.classroom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.classroom-card {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 10px 20px -5px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.classroom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px -5px rgba(0,0,0,0.1);
+}
+
+.opacity-75 { opacity: 0.75; }
+
+.classroom-cover {
+  position: relative;
+  height: 140px;
+  width: 100%;
+}
+
+.classroom-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.classroom-cover-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px;
+}
+
+.status-badge {
+  background: rgba(255,255,255,0.95);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.badge-blue { color: #1d4ed8; }
+.badge-orange { color: #d97706; }
+.badge-green { color: #059669; }
+.badge-purple { color: #7e22ce; }
+.badge-gray { color: #475569; }
+
+.cc-menu-btn {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s;
+}
+.cc-menu-btn:hover { background: rgba(255,255,255,0.4); }
+
+.classroom-body {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.cc-header h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.archived-tag {
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.cc-info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.cc-info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+.text-blue { color: #3b82f6; }
+.text-orange { color: #f59e0b; }
+.text-purple { color: #8b5cf6; }
+
+.cc-subtext {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: 0 0 20px 0;
+}
+
+.block-code {
+  background: #f1f5f9;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: #0f172a;
+  letter-spacing: 0.1em;
+  user-select: all;
+  cursor: pointer;
+}
+
+.cc-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.btn-cc-primary {
+  flex: 1;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.btn-cc-primary:hover {
+  background: #1d4ed8;
+  color: white;
+  border-color: #1d4ed8;
+}
+
+.btn-cc-secondary {
+  width: 40px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  color: #475569;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-cc-secondary:hover {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* Ghost Card */
+.ghost-card {
+  border: 2px dashed #cbd5e1;
+  background: rgba(248, 250, 252, 0.5);
+  box-shadow: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+}
+
+.ghost-card:hover {
+  border-color: #3b82f6;
+  background: #eff6ff;
+  transform: translateY(-5px);
+}
+
+.ghost-content {
+  text-align: center;
+}
+
+.ghost-icon-wrap {
+  width: 56px;
+  height: 56px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s;
+}
+
+.ghost-card:hover .ghost-icon-wrap {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.2);
+}
+
+.ghost-card h3 {
+  font-size: 1.1rem;
+  color: #1d4ed8;
+  margin: 0 0 4px 0;
+  font-weight: 700;
+}
+
+.ghost-card p {
+  color: #64748b;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+/* Empty State */
+.empty-state {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  text-align: center;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+}
+
+.empty-icon {
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.empty-state h3 {
+  font-size: 1.2rem;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+}
+
+.empty-state p {
+  color: #64748b;
+  font-size: 0.95rem;
+  max-width: 400px;
+}
+
+/* ══════════════════════════════════════════════════════════
+   PROFESSIONAL DARK MODE — Teacher Classes Page
+   ══════════════════════════════════════════════════════════ */
+
+/* ── Toolbar ── */
+html.dark-mode .classes-toolbar {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+html.dark-mode .classes-search {
+  background-color: #0f172a;
+  border-color: rgba(255, 255, 255, 0.05);
+}
+html.dark-mode .classes-search input {
+  color: #FFFFFF;
+}
+
+/* ── Filter Select ── */
+html.dark-mode .filter-select {
+  background-color: #0f172a;
+  border-color: rgba(255, 255, 255, 0.05);
+  color: #cbd5e1;
+}
+
+/* ── Classroom Cards ── */
+html.dark-mode .classroom-card {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+}
+html.dark-mode .classroom-card:hover {
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ── Card Header & Body ── */
+html.dark-mode .cc-header h3 {
+  color: #FFFFFF;
+}
+html.dark-mode .cc-subtext {
+  color: #94a3b8;
+}
+html.dark-mode .cc-info-item {
+  color: #94a3b8;
+}
+html.dark-mode .archived-tag {
+  background: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+}
+
+/* ── Code Block ── */
+html.dark-mode .block-code {
+  background: #0f172a;
+  color: #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ── Status Badge ── */
+html.dark-mode .status-badge {
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  backdrop-filter: blur(4px);
+}
+
+/* ── Card Action Buttons ── */
+html.dark-mode .btn-cc-primary {
+  background: rgba(59, 130, 246, 0.12);
+  color: #60a5fa;
+  border-color: rgba(59, 130, 246, 0.25);
+}
+html.dark-mode .btn-cc-primary:hover {
+  background: #3b82f6;
+  color: #ffffff;
+  border-color: #3b82f6;
+}
+
+html.dark-mode .btn-cc-secondary {
+  background: #0f172a;
+  border-color: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+}
+html.dark-mode .btn-cc-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #FFFFFF;
+}
+
+/* ── Ghost Card ── */
+html.dark-mode .ghost-card {
+  border-color: rgba(255, 255, 255, 0.05);
+  background: rgba(15, 23, 42, 0.5);
+}
+html.dark-mode .ghost-card:hover {
+  border-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.05);
+}
+html.dark-mode .ghost-icon-wrap {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+html.dark-mode .ghost-card:hover .ghost-icon-wrap {
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.25);
+}
+html.dark-mode .ghost-card h3 {
+  color: #60a5fa;
+}
+html.dark-mode .ghost-card p {
+  color: #64748b;
+}
+
+/* ── Empty State ── */
+html.dark-mode .empty-state {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.05);
+}
+html.dark-mode .empty-state h3 {
+  color: #FFFFFF;
+}
+html.dark-mode .empty-state p {
+  color: #64748b;
+}
+
+/* ── Back Button ── */
+html.dark-mode .icon-btn-round {
+  background: #1e293b;
+  border-color: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+}
+html.dark-mode .icon-btn-round:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #FFFFFF;
+}

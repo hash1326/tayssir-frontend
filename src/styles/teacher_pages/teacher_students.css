@@ -1,0 +1,249 @@
+/* teacher_students.css */
+
+.students-container {
+  padding: 0 40px 40px;
+}
+
+/* Toolbar */
+.students-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  background: white;
+  padding: 16px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  border: 1px solid #e2e8f0;
+}
+
+.students-search {
+  width: 400px;
+  background-color: #f1f5f9;
+}
+
+.toolbar-actions {
+  display: flex;
+  gap: 16px;
+}
+
+/* Students Grid */
+.student-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.student-card {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 10px 20px -5px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.student-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px -5px rgba(0,0,0,0.1);
+}
+
+/* Card Header */
+.sc-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px;
+  background: linear-gradient(to bottom, #f8fafc, #ffffff);
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.sc-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #eff6ff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.sc-info h3 {
+  font-size: 1.15rem;
+  font-weight: 750;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+}
+
+.sc-email {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Card Body */
+.sc-body {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.sc-detail-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sc-detail-row.space-between {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sc-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.sc-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* Badges */
+.sc-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sc-class-badge {
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  border: 1px solid #bfdbfe;
+}
+
+.perf-badge {
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.perf-badge.excellent { background: #dcfce7; color: #166534; }
+.perf-badge.good { background: #fef9c3; color: #854d0e; }
+.perf-badge.average { background: #ffedd5; color: #9a3412; }
+.perf-badge.needs-attention { background: #fee2e2; color: #991b1b; }
+
+/* Actions */
+.sc-actions {
+  display: flex;
+  border-top: 1px solid #f1f5f9;
+  background: #f8fafc;
+}
+
+.btn-sc-message, 
+.btn-sc-delete {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.btn-sc-message {
+  color: #475569;
+  border-right: 1px solid #e2e8f0;
+}
+
+.btn-sc-message:hover {
+  background: white;
+  color: #1d4ed8;
+}
+
+.btn-sc-delete {
+  color: #ef4444;
+}
+
+.btn-sc-delete:hover {
+  background: #fef2f2;
+}
+
+/* Empty State (if imported file failed to cascade correctly) */
+.empty-state {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0;
+  text-align: center;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+}
+
+.empty-icon {
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.empty-state h3 {
+  font-size: 1.2rem;
+  color: #1e293b;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.empty-state p {
+  color: #64748b;
+  font-size: 0.95rem;
+  max-width: 400px;
+}
+
+/* ==== PROFESSIONAL DARK MODE  Students Page ==== */
+html.dark-mode .students-toolbar { background: #1e293b; border-color: rgba(255, 255, 255, 0.05); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+html.dark-mode .students-search { background-color: #0f172a; border-color: rgba(255, 255, 255, 0.05); }
+html.dark-mode .students-search input { color: #FFFFFF; }
+html.dark-mode .student-card { background: #1e293b; border-color: rgba(255, 255, 255, 0.05); box-shadow: 0 10px 20px -5px rgba(0,0,0,0.5); }
+html.dark-mode .student-card:hover { box-shadow: 0 15px 30px -5px rgba(0,0,0,0.6); border-color: rgba(255, 255, 255, 0.1); }
+html.dark-mode .sc-header { background: linear-gradient(to bottom, #0f172a, #1e293b); border-bottom-color: rgba(255, 255, 255, 0.05); }
+html.dark-mode .sc-avatar { border-color: rgba(255, 255, 255, 0.05); }
+html.dark-mode .sc-info h3 { color: #FFFFFF; }
+html.dark-mode .sc-email { color: #94a3b8; }
+html.dark-mode .sc-label { color: #94a3b8; }
+html.dark-mode .sc-value { color: #e2e8f0; }
+html.dark-mode .sc-class-badge { background: rgba(59,130,246,0.15); color: #60a5fa; border-color: rgba(59,130,246,0.25); }
+html.dark-mode .perf-badge.excellent { background: rgba(22,163,74,0.15); color: #4ade80; }
+html.dark-mode .perf-badge.good { background: rgba(245,158,11,0.15); color: #fbbf24; }
+html.dark-mode .perf-badge.average { background: rgba(249,115,22,0.15); color: #fb923c; }
+html.dark-mode .perf-badge.needs-attention { background: rgba(239,68,68,0.15); color: #f87171; }
+html.dark-mode .sc-actions { background: #0f172a; border-top-color: rgba(255, 255, 255, 0.05); }
+html.dark-mode .btn-sc-message { color: #94a3b8; border-right-color: rgba(255, 255, 255, 0.05); }
+html.dark-mode .btn-sc-message:hover { background: #1e293b; color: #60a5fa; }
+html.dark-mode .btn-sc-delete:hover { background: rgba(239,68,68,0.1); }
+html.dark-mode .empty-state { background: #1e293b; border-color: rgba(255, 255, 255, 0.05); }
+html.dark-mode .empty-state h3 { color: #FFFFFF; }
+html.dark-mode .empty-state p { color: #64748b; }

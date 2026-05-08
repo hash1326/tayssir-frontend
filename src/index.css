@@ -1,0 +1,41 @@
+:root {
+  --primary: #4F46E5;
+  --primary-hover: #4338CA;
+  --bg-body: #F9FAFB;
+  --text-dark: #1E293B;
+  --text-muted: #4B5563;
+  --white: #ffffff;
+  --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --font-main: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-body);
+  color: var(--text-dark);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  transition: all 0.2s;
+}
+
+ul {
+  list-style: none;
+}
